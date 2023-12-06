@@ -1,0 +1,11 @@
+.logo {
+  width: 41px;
+  height: 41px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 61px;
+    height: 61px;
+  }
+}/*# sourceMappingURL=header.module.css.map */

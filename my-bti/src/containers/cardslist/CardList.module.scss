@@ -1,0 +1,10 @@
+.card_list_section {
+    position: relative;
+    z-index: 1;
+    padding: 10vh 0;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #fff 100%);
+}
+
+.h4 {
+    @apply text-center my-5 md:my-10 font-bold text-gray-900;
+}

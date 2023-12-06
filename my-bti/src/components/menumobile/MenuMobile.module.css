@@ -1,0 +1,11 @@
+.menu {
+  z-index: 5;
+}
+
+.div_menu {
+  @apply absolute flex md:hidden flex-col items-center justify-center gap-2 w-full bg-white text-black p-3;
+}
+
+.link {
+  @apply font-semibold uppercase text-sm;
+}/*# sourceMappingURL=MenuMobile.module.css.map */

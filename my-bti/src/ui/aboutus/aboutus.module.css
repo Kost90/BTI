@@ -1,0 +1,32 @@
+.img {
+  display: none;
+  border-radius: 5px;
+  width: 500px;
+  height: 400px;
+}
+
+.container_content {
+  @apply flex justify-between items-center;
+}
+
+.blue_frame {
+  bottom: -10%;
+  right: -10%;
+  @apply hidden md:block absolute w-14 md:w-24 h-14 md:h-24;
+}
+
+.green_frame {
+  top: -10%;
+  left: -10%;
+  @apply hidden md:block absolute w-14 md:w-24 h-14 md:h-24;
+}
+
+.h4 {
+  @apply text-white uppercase font-bold;
+}
+
+@media (min-width: 1024px) {
+  .img {
+    display: block;
+  }
+}/*# sourceMappingURL=aboutus.module.css.map */

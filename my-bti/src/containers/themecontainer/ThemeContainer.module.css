@@ -1,0 +1,10 @@
+.dark {
+  width: 100%;
+  background: rgba(30, 28, 28, 0.788);
+  z-index: 2;
+}
+
+.light {
+  width: 100%;
+  background-color: unset;
+}/*# sourceMappingURL=ThemeContainer.module.css.map */

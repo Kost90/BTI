@@ -1,0 +1,7 @@
+.div {
+  @apply container my-7 md:my-14 flex items-center flex-col gap-8 md:gap-14 h-screen h-min text-sm md:text-lg min-h-screen;
+}
+
+.h1 {
+  @apply font-bold text-xl;
+}/*# sourceMappingURL=modalwindow.module.css.map */

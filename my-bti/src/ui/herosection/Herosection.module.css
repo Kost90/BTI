@@ -1,0 +1,24 @@
+.ul_container {
+  @apply flex flex-col gap-5;
+}
+.ul_container li {
+  @apply flex gap-3;
+}
+
+.text_container {
+  max-width: 500px;
+  margin: 0 auto;
+  @apply flex flex-col items-center justify-center gap-5 mb-8 md:mb-14;
+}
+.text_container h4 {
+  @apply text-slate-950 font-bold leading-8 text-center;
+}
+.text_container .list_text {
+  @apply text-slate-500 text-sm md:text-xl font-medium;
+}
+
+@media (min-width: 768px) {
+  .text_container h4 {
+    text-align: unset;
+  }
+}/*# sourceMappingURL=Herosection.module.css.map */

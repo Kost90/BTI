@@ -1,0 +1,59 @@
+
+
+.orange_vector {
+    width: 60px;
+    height: 60px;
+}
+
+.green_elipsis {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.danger_vector {
+    width: 60px;
+    height: 65px;
+}
+
+.purple_elipsis {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.svg_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .green_elipsis {
+        width: 75px;
+    }
+
+    .purple_elipsis {
+        width: 75px;
+    }
+}
+
+@media (min-width: 1333px) {
+    .orange_vector {
+        width: 85px;
+        height: 85px;
+    }
+
+    .green_elipsis {
+        width: 85px;
+    }
+
+    .danger_vector {
+        width: 85px;
+        height: 80px;
+    }
+
+    .purple_elipsis {
+        width: 85px;
+    }
+}

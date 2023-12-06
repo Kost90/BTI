@@ -1,0 +1,9 @@
+.loop_container {
+  @apply flex items-center relative h-10 w-full overflow-hidden p-10 bg-slate-100;
+}
+.loop_container p {
+  @apply uppercase text-sm md:text-xl lg:text-2xl text-slate-700 font-semibold w-full whitespace-nowrap;
+}
+.loop_container span {
+  @apply text-green-500;
+}/*# sourceMappingURL=LoopLine.module.css.map */
