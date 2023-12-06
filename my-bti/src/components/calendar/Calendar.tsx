@@ -33,7 +33,6 @@ export default function Calendar() {
     }
   }, [time]);
 
-  console.log(dates);
 
   useEffect(() => {
     const book = {
