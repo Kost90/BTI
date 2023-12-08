@@ -1,16 +1,11 @@
 import { createAsyncThunk, createSlice, nanoid, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
 
+
 interface initialStates{
     date:string,
     time:number,
 }
-
-// export const postBooking = createAsyncThunk<>('posts/fetchPosts', async () => {
-//     const controler = new AbortController()
-//     const signal = controler.signal
-//     return await JsonPlaceholderAPI.getPosts({ signal })
-//   })
 
 const initialBook: initialStates = {
     date:'',

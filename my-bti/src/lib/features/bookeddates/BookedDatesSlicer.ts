@@ -5,24 +5,28 @@ import {
   PayloadAction,
 } from "@reduxjs/toolkit";
 import { RootState } from "../../store";
+import DataBaseApi from "@/api/DataBaseApi";
 
 interface initialStates {
   date: string;
   times: number[];
 }
 
-// export const postBooking = createAsyncThunk<>('posts/fetchPosts', async () => {
-//     const controler = new AbortController()
-//     const signal = controler.signal
-//     return await JsonPlaceholderAPI.getPosts({ signal })
-//   })
+export const fetchDates = createAsyncThunk<initialStates[]>(
+  "dates/fetchDates",
+  async () => {
+    return await DataBaseApi.getDates();
+  }
+);
 
-const initialDates: initialStates[] = [
-  {
-    date: "",
-    times: [0],
-  },
-];
+export const addDate = createAsyncThunk<initialStates,initialStates>(
+  "dates/addDates",
+  async (data: any) => {
+    return await DataBaseApi.addDate(data);
+  }
+);
+
+const initialDates: initialStates[] = [];
 
 export const bookedDatesSlicer = createSlice({
   name: "dates",
@@ -43,6 +47,23 @@ export const bookedDatesSlicer = createSlice({
         }
       });
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchDates.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchDates.fulfilled, (state, action) => {
+        state.dates = action.payload;
+        state.loading = false;
+      })
+      .addCase(addDate.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(addDate.fulfilled, (state, action) => {
+        state.dates.push(action.payload);
+        state.loading = false;
+      });
   },
 });
 

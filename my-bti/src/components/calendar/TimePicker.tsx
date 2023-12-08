@@ -3,7 +3,7 @@ import { useState, useEffect, memo } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useAppSelector } from "@/lib/hooks";
-import styles from './Calendar.module.css'
+import styles from "./Calendar.module.css";
 
 interface TimePickerProps {
   time: number[];
@@ -15,6 +15,7 @@ const TimePicker = memo(({ curentDate, onChange, time }: TimePickerProps) => {
   const dates = useAppSelector((state) => state.dates.dates);
   const [dateObj, setDateObj] = useState<Date[]>([]);
   const [excludedTimes, setExcludedTimes] = useState<Date[]>([]);
+  console.log(dates);
 
   useEffect(() => {
     if (curentDate) {
@@ -27,6 +28,7 @@ const TimePicker = memo(({ curentDate, onChange, time }: TimePickerProps) => {
   }, [curentDate, dateObj]);
 
   useEffect(() => {
+    console.log("Dates:", dates);
     const newDateObjects: Date[] = [];
     dates.forEach((item) => {
       item.times.forEach((time) => {

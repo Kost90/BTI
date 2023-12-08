@@ -11,9 +11,9 @@ import styles from "./BookForm.module.css";
 
 function BookForm() {
   const book = useAppSelector((state) => state.booking.booking);
-  const order = useAppSelector((state) => state.orders.orders);
+  // const order = useAppSelector((state) => state.orders.orders);
   const router = useRouter();
-  console.log(order);
+ 
   const dispatch = useAppDispatch();
   const {
     register,

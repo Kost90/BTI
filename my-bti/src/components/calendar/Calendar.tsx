@@ -6,6 +6,7 @@ import TimePicker from "./TimePicker";
 import { addBook } from "@/lib/features/booking/BookingSlicer";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import {
+  addDate,
   addDates,
   addTime,
 } from "@/lib/features/bookeddates/BookedDatesSlicer";
@@ -28,11 +29,12 @@ export default function Calendar() {
           date: currentDate,
           times: [...time],
         };
-        dispatch(addDates(object));
+        console.log(object);
+        dispatch(addDate(object));
+        console.log(`What back ${dates}`);
       }
     }
   }, [time]);
-
 
   useEffect(() => {
     const book = {

@@ -23,7 +23,7 @@ export default function ServicesLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  console.log(pathname);
+ 
 
   return (
     <div >
