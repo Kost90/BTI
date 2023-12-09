@@ -1,1 +1,1 @@
-export const DataBAseUrl = 'http://localhost:8080'
+export const DataBAseUrl = process.env.NEXT_PUBLIC_URL ?? '';
