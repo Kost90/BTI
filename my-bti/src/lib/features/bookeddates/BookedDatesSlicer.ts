@@ -1,7 +1,6 @@
 import {
   createAsyncThunk,
   createSlice,
-  nanoid,
   PayloadAction,
 } from "@reduxjs/toolkit";
 import { RootState } from "../../store";
@@ -19,9 +18,10 @@ export const fetchDates = createAsyncThunk<initialStates[]>(
   }
 );
 
-export const addDate = createAsyncThunk<initialStates,initialStates>(
+export const addDate = createAsyncThunk<initialStates, initialStates>(
   "dates/addDates",
   async (data: any) => {
+    console.log(`Slicer add date: ${data}`);
     return await DataBaseApi.addDate(data);
   }
 );
@@ -35,6 +35,9 @@ export const bookedDatesSlicer = createSlice({
     loading: false,
   },
   reducers: {
+    addData(state, action: PayloadAction<initialStates[]>) {
+      state.dates = action.payload;
+    },
     addDates(state, action: PayloadAction<initialStates>) {
       state.dates.push(action.payload);
     },
@@ -67,6 +70,6 @@ export const bookedDatesSlicer = createSlice({
   },
 });
 
-export const { addDates, addTime } = bookedDatesSlicer.actions;
+export const { addDates, addTime, addData } = bookedDatesSlicer.actions;
 
 export const selectBooking = (state: RootState) => state.dates.dates;

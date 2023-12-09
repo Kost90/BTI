@@ -6,6 +6,8 @@ import { string, object } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Input from "@/components/input/Input";
 import styles from "./contactForm.module.css";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 type Inputs = {
   name: string;
@@ -27,7 +29,7 @@ const contactSchema = {
 
 function ContactForm() {
   const router = useRouter();
-
+  const form = useRef<HTMLFormElement>(null);
   const {
     register,
     handleSubmit,
@@ -38,12 +40,24 @@ function ContactForm() {
   });
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
+    console.log(process.env.PUBLIC_KEY)
+    if (form.current) {
+      emailjs.sendForm(
+        "bti_contact_form",
+        "contact_form",
+        form.current,
+        `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`
+      );
+    }
     reset();
     router.replace("/services/modalwindow");
   };
   return (
-    <form className={styles.contactform} onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className={styles.contactform}
+      onSubmit={handleSubmit(onSubmit)}
+      ref={form}
+    >
       <Input
         type={"text"}
         placeholder={"Введіть Ваше імя"}

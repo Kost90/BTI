@@ -7,31 +7,36 @@ import { addBook } from "@/lib/features/booking/BookingSlicer";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import {
   addDate,
-  addDates,
+  addData,
   addTime,
 } from "@/lib/features/bookeddates/BookedDatesSlicer";
 import styles from "./Calendar.module.css";
+import { dataParams } from "@/app/services/bookingeneer/page";
 
-export default function Calendar() {
+interface CalendarProps {
+  data: dataParams[];
+}
+
+export default function Calendar({ data }: CalendarProps) {
   const [currentDate, setcurrentDate] = useState<string>("");
   const dates = useAppSelector((state) => state.dates.dates);
   const [time, setTime] = useState<number[]>([]);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
+    dispatch(addData(data));
+  }, []);
+
+  useEffect(() => {
     if (currentDate) {
       const index = dates.findIndex((item) => item.date === currentDate);
-
+      const object = {
+        date: currentDate,
+        times: [...time],
+      };
+      dispatch(addDate(object));
       if (index !== -1) {
         dispatch(addTime({ index, time }));
-      } else {
-        const object = {
-          date: currentDate,
-          times: [...time],
-        };
-        console.log(object);
-        dispatch(addDate(object));
-        console.log(`What back ${dates}`);
       }
     }
   }, [time]);

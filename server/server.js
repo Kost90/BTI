@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-// const dotenv = require('dotenv');
 const datesRoutes = require("./routes/datesroutes");
+const {url} = require('./config')
 
 const app = express();
-const port = 8000;
-const url = "mongodb://127.0.0.1:27017/mybti";
+const port = 8080;
+
 
 app.use(cors());
 app.use(express.json());

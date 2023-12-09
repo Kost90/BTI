@@ -1,5 +1,6 @@
 interface params {
   path: string;
+  signal?: AbortSignal;
   method?: string;
   body?: string | FormData | null;
   headers?: Record<string, string>;
@@ -16,6 +17,7 @@ class API {
     method = "GET",
     body,
     headers = {},
+    signal,
     ...rest
   }: params) {
     const response = await fetch(`${this.baseUrl}/${path}`, {

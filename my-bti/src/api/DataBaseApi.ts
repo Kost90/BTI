@@ -1,4 +1,5 @@
 import { DataBAseUrl } from "@/constants/DataBase";
+import { unstable_noStore as noStore } from "next/cache";
 import { API } from "./Api";
 
 export interface FetchArg<Updates = Record<string, unknown>> {
@@ -15,7 +16,8 @@ export interface datesParams {
 
 class DataBaseApi extends API {
   async getDates() {
-    return await this.fetch({ path: "dates/" });
+    noStore();
+    return await this.fetch({ path: "dates", method: "GET" });
   }
 
   async addDate(dates: datesParams) {
@@ -25,7 +27,6 @@ class DataBaseApi extends API {
         method: "POST",
         body: JSON.stringify(dates),
       });
-      console.log(response);
       return response;
     } catch (error) {
       return console.error(error);
