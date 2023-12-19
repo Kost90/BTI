@@ -96,4 +96,6 @@ function PropertyServResult() {
   );
 }
 
+Propertyservicecalc.displayName = 'Propertyservicecalc';
+
 export default PropertyServResult;
