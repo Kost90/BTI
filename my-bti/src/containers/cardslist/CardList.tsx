@@ -7,7 +7,7 @@ const CardList = () => {
   
   return (
     <section className={styles.card_list_section}>
-      <motion.div>
+      <div>
         <motion.h4
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -18,7 +18,7 @@ const CardList = () => {
           НАШІ ПОСЛУГИ:
         </motion.h4>
         <Card />
-      </motion.div>
+      </div>
     </section>
   );
 };

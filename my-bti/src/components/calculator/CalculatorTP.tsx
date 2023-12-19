@@ -5,6 +5,7 @@ import { Calculation } from "./utility";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { TypeDevelopEnum } from "../forms/bookingeneer/models";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import styles from "./CalculatorTP.module.css";
 import Link from "next/link";
 
