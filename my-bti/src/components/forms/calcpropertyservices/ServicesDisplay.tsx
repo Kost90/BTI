@@ -9,14 +9,14 @@ function ServicesDisplay({ services, onClick }: any) {
       <h2>{services.title}</h2>
       <h1>Необхідні документи:</h1>
       <ul>
-        {services.documents.map((item: string) => (
-          <li>{item}</li>
+        {services.documents.map((item: string, i:number) => (
+          <li key={i}>{item}</li>
         ))}
       </ul>
       <h1>Етапи виконання псоулги:</h1>
       <ul>
-        {services.stages.map((item: string) => (
-          <li>{item}</li>
+        {services.stages.map((item: string, i:number) => (
+          <li key={i}>{item}</li>
         ))}
       </ul>
       <h1>Орієнтовні строки виконання: <span>{services.time}</span></h1>
