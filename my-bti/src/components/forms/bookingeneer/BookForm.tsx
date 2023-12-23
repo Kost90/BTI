@@ -7,13 +7,16 @@ import { useAppSelector } from "@/lib/hooks";
 import { useAppDispatch } from "@/lib/hooks";
 import { addOrder } from "@/lib/features/orders/OrderSlice";
 import { TypeDevelopEnum, IFormInput } from "./models";
+import emailjs from "@emailjs/browser";
 import styles from "./BookForm.module.css";
+import { useRef } from "react";
 
 function BookForm() {
+  const form = useRef<HTMLFormElement>(null);
   const book = useAppSelector((state) => state.booking.booking);
-  // const order = useAppSelector((state) => state.orders.orders);
   const router = useRouter();
- 
+  console.log(book);
+
   const dispatch = useAppDispatch();
   const {
     register,
@@ -33,6 +36,14 @@ function BookForm() {
       square: data.square,
     };
     dispatch(addOrder(booking));
+    if (form.current) {
+      emailjs.sendForm(
+        "bti_booking_form",
+        "booking_form",
+        form.current,
+        `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`
+      );
+    }
     reset();
     router.replace("/services/modalwindow");
   };
@@ -44,7 +55,11 @@ function BookForm() {
           <h2 className="uppercase font-semibold">
             Введіть Ваші данні та адресу:
           </h2>
-          <form onSubmit={handleSubmit(onSubmit)} className={styles.bookform}>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className={styles.bookform}
+            ref={form}
+          >
             <Input
               type={"text"}
               placeholder={"Ваше імя"}

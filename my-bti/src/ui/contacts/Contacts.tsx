@@ -1,27 +1,16 @@
-import { Box, Typography } from "@mui/material";
 import SideSection from "./Sidesection";
 import ContactForm from "../../components/forms/contactForm/ContactForm";
-import { title } from "./stylesconstans";
-
-const containerBox = {
-  display: "flex",
-  flexDirection: { xs: "column-reverse", md: "row" },
-  alignItems: "center",
-  justifyContent: { xs: "center", md: "space-between" },
-  gap: { xs: "20px", md: "0" },
-};
+import styles from "./contacts.module.css";
 
 function Contacts() {
   return (
-    <Box>
-      <Typography variant="h4" sx={title}>
-        ЗАЛИШИТИ ПОВІДОМЛЕННЯ
-      </Typography>
-      <Box sx={containerBox}>
+    <div>
+      <h4 className={styles.h4_hero}>ЗАЛИШИТИ ПОВІДОМЛЕННЯ</h4>
+      <div className={styles.container_box}>
         <SideSection />
         <ContactForm />
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 }
 

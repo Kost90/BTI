@@ -8,8 +8,8 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
-  title: "My BTI",
-  description: "Created technical documents",
+  title: "МОЄ БТІ",
+  description: "Оформлення нерухомості в Одесі",
 };
 
 export const inter = Inter({ subsets: ["latin"] });

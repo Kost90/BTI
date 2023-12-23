@@ -4,20 +4,26 @@ import styles from "./CardList.module.css";
 import Card from "@/components/card/Card";
 
 const CardList = () => {
+
+  const MotionCardComponent = motion(Card)
   
   return (
     <section className={styles.card_list_section}>
       <div>
         <motion.h4
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          initial={{ y: 100 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true, amount: 0.3}}
           className={styles.h4}
         >
           НАШІ ПОСЛУГИ:
         </motion.h4>
-        <Card />
+        <MotionCardComponent 
+        initial={{ opacity: 0, y: 150 }}
+        whileInView={{opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        viewport={{ once: true, amount: 0.4}}/>
       </div>
     </section>
   );

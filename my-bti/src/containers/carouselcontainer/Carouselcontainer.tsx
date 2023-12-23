@@ -3,15 +3,13 @@ import Greenelipsis from "../../../public/assets/svg/greenelipsis.svg";
 import Orangevector from "../../../public/assets/svg/orangvector.svg";
 import Dangervector from "../../../public/assets/svg/dangervector.svg";
 import Purpleelipsis from "../../../public/assets/svg/purpleelipsis.svg";
-import { Box } from "@mui/material";
 import CarouselComponent from "../../components/carousel/Carousel";
 import styles from "./Carouselsection.module.css";
-import { mainbox, realtivebox } from "./styleconstans";
 
-const Carouselsection = async () => {
+const Carouselsection = () => {
   return (
-    <Box sx={mainbox}>
-      <Box sx={realtivebox}>
+    <div className={styles.main_container}>
+      <div className="flex flex-col">
         <div className={styles.svg_container}>
           <Image
             src={Orangevector}
@@ -37,8 +35,8 @@ const Carouselsection = async () => {
             className={styles.danger_vector}
           />
         </div>
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
 

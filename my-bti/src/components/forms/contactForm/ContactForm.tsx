@@ -40,7 +40,7 @@ function ContactForm() {
   });
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(process.env.PUBLIC_KEY)
+    console.log(process.env.PUBLIC_KEY);
     if (form.current) {
       emailjs.sendForm(
         "bti_contact_form",

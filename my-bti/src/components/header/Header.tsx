@@ -54,7 +54,7 @@ const Header = () => {
                 component="div"
                 sx={{ color: "#22C55E", fontWeight: "bold" }}
               >
-                MY-BTI
+                МОЄ-БТІ
               </Typography>
             </Box>
             <Box sx={{ display: { xs: "none", md: "flex", color: "#556987" } }}>

@@ -1,4 +1,10 @@
 import PropertyServResult from "@/components/forms/calcpropertyservices/Propertyservicecalc"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "МОЄ БТІ",
+  description: "Оформлення нерухомості Одеса",
+};
 
 const PropertyService =async () => {
 

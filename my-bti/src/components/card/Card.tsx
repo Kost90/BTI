@@ -1,21 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, forwardRef, Ref } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cardContent } from "@/constants/CardsData";
 import styles from "./Card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-function Card() {
+const Card =  forwardRef(({props}:any,ref:Ref<HTMLDivElement>) =>{
   const [selectedId, setSelectedId] = useState("");
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
+      <div
+      ref={ref}
         className={styles.grid_container}
       >
         {cardContent.map((item) => (
@@ -36,7 +33,7 @@ function Card() {
             </div>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
       <AnimatePresence>
         {selectedId && (
           <motion.div
@@ -87,6 +84,6 @@ function Card() {
       </AnimatePresence>
     </>
   );
-}
+})
 
 export default Card;

@@ -18,6 +18,8 @@ const content = [
   },
 ];
 
+
+
 function CarouselComponent() {
   return (
     <Carousel
