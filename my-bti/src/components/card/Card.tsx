@@ -86,4 +86,6 @@ const Card =  forwardRef(({props}:any,ref:Ref<HTMLDivElement>) =>{
   );
 })
 
+Card.displayName = "Card";
+
 export default Card;
