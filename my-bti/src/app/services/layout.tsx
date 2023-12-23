@@ -1,5 +1,4 @@
 "use client";
-import { Metadata } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
