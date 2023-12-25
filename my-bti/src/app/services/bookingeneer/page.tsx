@@ -22,7 +22,7 @@ const data = await DataBaseApi.getDates();
     <div className={styles.page_container}>
       <TextContent />
       <Calendar data={data}/>
-      <BookForm />
+      <BookForm/>
     </div>
   );
 };

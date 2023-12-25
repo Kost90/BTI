@@ -11,4 +11,6 @@ export interface IFormInput {
     phone?: string;
     email: string;
     square: number;
+    date?:string;
+    time?:string;
   }

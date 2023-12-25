@@ -1,12 +1,8 @@
 .containerStyle {
-  position: relative;
-  height: 40px;
-  display: flex;
-  gap: 50px;
-  align-items: center;
+  @apply relative h-5 md:h-10 flex gap-7 items-center;
 }
 .containerStyle h2 {
-  @apply text-base font-semibold text-slate-600;
+  @apply text-sm md:text-base font-semibold text-slate-600;
 }
 
 .circleStyle {

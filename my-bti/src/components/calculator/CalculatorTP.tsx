@@ -4,7 +4,7 @@ import Button from "../button/Button";
 import { Calculation } from "./utility";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { TypeDevelopEnum } from "../forms/bookingeneer/models";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./CalculatorTP.module.css";
 import Link from "next/link";
@@ -59,6 +59,22 @@ function CalculatorTP({ onChange }: ICalculatorTPProps) {
 
 function CalcResult() {
   const [count, setCount] = useState(0);
+  const [service, setService] = useState({});
+  const [show, setShow] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    }
+  }, [loading]);
+
+  const handelClick = () => {
+    setLoading(!loading);
+    setShow(!show);
+  };
 
   const handelChange = (sum: number) => {
     setCount(sum);

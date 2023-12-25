@@ -62,8 +62,6 @@ function PropertyServResult() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    console.log(show);
-    console.log(loading);
     if (loading) {
       setTimeout(() => {
         setLoading(false);

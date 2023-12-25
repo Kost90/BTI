@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import Input from "@/components/input/Input";
 import Button from "@/components/button/Button";
 import { useAppSelector } from "@/lib/hooks";
@@ -15,12 +15,12 @@ function BookForm() {
   const form = useRef<HTMLFormElement>(null);
   const book = useAppSelector((state) => state.booking.booking);
   const router = useRouter();
-  console.log(book);
 
   const dispatch = useAppDispatch();
   const {
     register,
     handleSubmit,
+    control,
     reset,
     formState: { errors },
   } = useForm<IFormInput>();
@@ -118,6 +118,18 @@ function BookForm() {
               required={true}
               register={register}
               errors={errors}
+            />
+            <input
+              type="text"
+              value={book.date}
+              {...register("date")}
+              className="hidden"
+            />
+            <input
+              type="text"
+              value={book.time}
+              {...register("time")}
+              className="hidden"
             />
             <Button type={"submit"}>Надіслати</Button>
           </form>
