@@ -11,7 +11,7 @@ import { addTheme } from "@/lib/features/theme/ThemeSlicer";
 
 const WhyWe = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref,{amount:0.5})
+  const isInView = useInView(ref,{amount:0.3})
   const dispatch = useAppDispatch();
 
   useEffect(() => {
