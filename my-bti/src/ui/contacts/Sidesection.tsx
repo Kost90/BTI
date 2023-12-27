@@ -11,10 +11,11 @@ import Orangevector from "../../../public/assets/svg/orangvector.svg";
 import Dangervector from "../../../public/assets/svg/dangervector.svg";
 import Purpleelipsis from "../../../public/assets/svg/purpleelipsis.svg";
 import styles from "./contacts.module.css";
+import themestyles from '../../containers/themecontainer/ThemeContainer.module.css'
 
 function SideSection() {
   return (
-    <div className={styles.side_contr}>
+    <div className={themestyles.side_contr}>
       <Image
         src={Orangevector}
         alt="svg_icon"
@@ -31,7 +32,7 @@ function SideSection() {
             <Image src={EmailIcon} alt="emailicon" />
           </div>
           <p>Email:</p>
-          <p>MyBtiOdesa@gmail.com</p>
+          <p>mybtiodesa@gmail.com</p>
         </div>
 
         <div className={styles.side_sec_card}>

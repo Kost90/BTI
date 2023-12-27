@@ -8,6 +8,7 @@ import Input from "@/components/input/Input";
 import styles from "./contactForm.module.css";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { useAppSelector } from "@/lib/hooks";
 
 type Inputs = {
   name: string;
@@ -28,6 +29,7 @@ const contactSchema = {
 };
 
 function ContactForm() {
+  const theme = useAppSelector((state) => state.theme.theme)
   const router = useRouter();
   const form = useRef<HTMLFormElement>(null);
   const {
@@ -54,7 +56,7 @@ function ContactForm() {
   };
   return (
     <form
-      className={styles.contactform}
+      className={theme === 'light'?styles.light_contactform:styles.dark_contactform}
       onSubmit={handleSubmit(onSubmit)}
       ref={form}
     >
@@ -87,11 +89,11 @@ function ContactForm() {
         required={true}
         errors={errors}
       />
-
+      <label>Повідомлення:</label>
       <textarea
         placeholder="Ваше повідомлення"
         {...register("message", { required: true })}
-        className={styles.textarea}
+        className={theme === 'light'?styles.light_textarea:styles.dark_textarea}
       />
 
       {errors.message?.message && (

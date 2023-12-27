@@ -26,7 +26,7 @@ function CarouselComponent() {
       className={styles.carousel}
       interval={5000}
       activeIndicatorIconButtonProps={{ style: { color: "#22C55E" } }}
-      indicatorIconButtonProps={{ style: { color: "white" } }}
+      indicatorIconButtonProps={{ style: { color: "gray" } }}
     >
       {content.map((item, i) => (
         <Item

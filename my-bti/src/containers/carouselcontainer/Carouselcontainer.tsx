@@ -5,10 +5,11 @@ import Dangervector from "../../../public/assets/svg/dangervector.svg";
 import Purpleelipsis from "../../../public/assets/svg/purpleelipsis.svg";
 import CarouselComponent from "../../components/carousel/Carousel";
 import styles from "./Carouselsection.module.css";
+import themestyle from '../themecontainer/ThemeContainer.module.css'
 
 const Carouselsection = () => {
   return (
-    <div className={styles.main_container}>
+    <div className={themestyle.main_container}>
       <div className="flex flex-col">
         <div className={styles.svg_container}>
           <Image

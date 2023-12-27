@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback} from "react";
 import {
   Container,
   AppBar,
@@ -102,14 +102,14 @@ const Header = () => {
                 onClick={handelChange}
                 sx={{ display: { xs: "flex", md: "none" } }}
               >
-                <CloseIcon />
+                <CloseIcon sx={{fill:theme === 'light'?"black":"white"}}/>
               </IconButton>
             ) : (
               <IconButton
                 onClick={handelChange}
                 sx={{ display: { xs: "flex", md: "none" } }}
               >
-                <MenuIcon />
+                <MenuIcon sx={{fill:theme === 'light'?"black":"white"}}/>
               </IconButton>
             )}
             <button type="button" onClick={handelClick}>

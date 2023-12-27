@@ -7,6 +7,7 @@ import {
   FieldError,
 } from "react-hook-form";
 import styles from "./Input.module.css";
+import { useAppSelector } from "@/lib/hooks";
 
 interface InputProps {
   type: string;
@@ -37,13 +38,14 @@ function Input({
   register,
   errors,
 }: InputProps) {
+  const theme = useAppSelector((state) => state.theme.theme)
   return (
     <>
       <label className={styles.label}>{label}</label>
       <input
         type={type}
         placeholder={placeholder}
-        className={styles.text_input}
+        className={theme === 'light'?styles.light_text_input:styles.dark_text_input}
         {...register(name, { required: required, pattern: pattern })}
       />
       {errors.name?.message && (

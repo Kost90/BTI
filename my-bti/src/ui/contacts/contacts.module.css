@@ -39,10 +39,6 @@
   justify-content: space-between;
 }
 
-.side_contr {
-  @apply container bg-slate-700 w-full rounded-md p-5 md:p-10 md:h-96 relative flex flex-col items-center;
-}
-
 .flex_container {
   @apply flex items-start md:items-baseline justify-between flex-col md:flex-row gap-5 mb-2 md:mb-5;
 }
