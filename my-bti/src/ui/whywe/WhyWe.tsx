@@ -25,8 +25,8 @@ const WhyWe = () => {
             initial={"hidden"}
             whileInView={"visible"}
             transition={{
-              duration: 0.4,
-              delay: i * 0.2,
+              duration: 0.3,
+              delay: i * 0.1,
             }}
             viewport={{ amount: 0.1, once: true }}
             variants={popUpOpacityVariant}

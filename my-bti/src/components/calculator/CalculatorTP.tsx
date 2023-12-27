@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import styles from "./CalculatorTP.module.css";
 import Link from "next/link";
 import Loader from "../loader/Loader";
+import { useAppSelector } from "@/lib/hooks";
 
 interface IInputData {
   squar: number;
@@ -63,6 +64,7 @@ function CalculatorTP({ onChange, onClick }: ICalculatorTPProps) {
 function CalcResult() {
   const [count, setCount] = useState(0);
   const [loading, setLoading] = useState(false);
+  const theme = useAppSelector((state) => state.theme.theme)
 
   useEffect(() => {
     if (loading) {
@@ -86,7 +88,7 @@ function CalcResult() {
        initial={{opacity:0}}
        animate={{opacity:1}}
        transition={{ duration: 0.3 }}
-       className={styles.h1}>
+       className={theme === 'light'?styles.light_h1:styles.dark_h1}>
         Вартість технічного паспорту становитеме:{" "}
         <span className={styles.span}>{count} грн.</span>
       </motion.h1>}

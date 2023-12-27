@@ -3,7 +3,7 @@
 }
 
 .select {
-  @apply rounded-md p-2 border border-slate-400 focus:outline-none focus:border-green-400;
+  @apply rounded-md p-2 border border-slate-400 focus:outline-none focus:border-green-400 w-full;
 }
 
 .label {

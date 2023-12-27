@@ -1,3 +1,14 @@
+.contentbox {
+  @apply flex flex-col items-center max-w-lg md:max-w-2xl m-auto;
+}
+.contentbox p {
+  @apply text-slate-500 text-sm md:text-xl text-center pb-5;
+}
+
+.hero_text {
+  @apply pt-16 pb-5 text-white uppercase text-center font-semibold;
+}
+
 .carousel {
   width: 100%;
   margin: 0 auto;

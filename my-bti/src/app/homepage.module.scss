@@ -1,8 +1,6 @@
 .hero_section_bg {
-    position: relative;
-    padding: 20vh 0 20vh 0;
-    width: 100%;
     z-index: 1;
+    @apply pt-7 md:pt-14 pb-7 md:pb-14 relative w-full;
 }
 
 .box_container_hero_sec {
@@ -14,45 +12,22 @@
 }
 
 .card_list_section {
-    position: relative;
     z-index: 1;
-    padding-bottom: 10vh;
+    @apply pb-7 md:pb-14 relative;
 }
 
 .aboutus_section {
-    position: relative;
-    padding-top: 10vh;
-    padding-bottom: 20vh;
-    width: 100%;
+    @apply pt-7 md:pt-14 pb-7 md:pb-14 w-full relative;
 }
 
 .why_we_section {
-    position: relative;
-    padding-bottom: 10vh;
-    width: 100%;
+    @apply pb-7 md:pb-14 w-full relative;
 }
 
 .contacts_section {
-    padding-bottom: 20vh;
-    width: 100%;
+    @apply pb-7 md:pb-14 w-full;
 }
 
-.wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 181px;
-        transform: rotateY(180deg);
-    }
-}
 
 .tilt {
     position: absolute;

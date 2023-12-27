@@ -1,11 +1,6 @@
 import Link from "next/link";
 import Button from "../../button/Button";
-import { Typography, Box } from "@mui/material";
-import {
-  contentbox,
-  heroText,
-  paragraphStyle,
-} from "./stylesconstants";
+import styles from '../Carousel.module.css'
 
 interface PropsParams {
   name: string;
@@ -15,17 +10,17 @@ interface PropsParams {
 
 const Item = async ({ name, description, path }: PropsParams) => {
   return (
-    <Box sx={contentbox}>
-      <Typography variant="h5" component="h3" align="center" sx={heroText}>
+    <div className={styles.contentbox}>
+      <h3 className={styles.hero_text}>
         {name}
-      </Typography>
-      <Typography align="center" paragraph sx={paragraphStyle}>
+      </h3>
+      <p>
         {description}
-      </Typography>
+      </p>
       <Button type={"button"}>
         <Link href={path} key={path}>Замовити</Link>
       </Button>
-    </Box>
+    </div>
   );
 };
 

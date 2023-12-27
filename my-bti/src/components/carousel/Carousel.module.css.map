@@ -1,1 +1,1 @@
-{"version":3,"sources":["Carousel.module.scss","Carousel.module.css"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,cAAA;EACA,eAAA;EACA,aAAA;ACCJ","file":"Carousel.module.css"}
+{"version":3,"sources":["Carousel.module.scss","Carousel.module.css"],"names":[],"mappings":"AAAA;EACI,8DAAA;ACCJ;ADAI;EACI,yDAAA;ACER;;ADEA;EACI,gEAAA;ACCJ;;ADEA;EACI,WAAA;EACA,cAAA;EACA,eAAA;EACA,aAAA;ACCJ","file":"Carousel.module.css"}
