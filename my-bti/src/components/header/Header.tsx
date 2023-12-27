@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import {
   Container,
   AppBar,
@@ -11,12 +11,14 @@ import {
   IconButton,
 } from "@mui/material";
 import Logo from "../../../public/assets/svg/logo.svg";
+import DarkLogo from '../../../public/assets/svg/theme/dark.svg';
+import LightLogo from '../../../public/assets/svg/theme/light.svg';
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Link from "next/link";
 import MenuMobile from "@/components/menumobile/MenuMobile";
-// import { useAppDispatch, useAppSelector } from "@/lib/hooks";
-// import { addTheme } from "@/lib/features/theme/ThemeSlicer";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { addTheme } from "@/lib/features/theme/ThemeSlicer";
 import styles from "./header.module.css";
 
 const log_container = {
@@ -29,6 +31,18 @@ const log_container = {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const theme:string = useAppSelector((state) => state.theme.theme);
+  const dispatch = useAppDispatch();
+
+
+  const handelClick = useCallback(() =>{
+    if(theme === 'light'){
+      dispatch(addTheme('dark'))
+    }else{
+      dispatch(addTheme('light'))
+      console.log('click light')
+    }
+  },[theme])
 
   const handelChange = useCallback(() => {
       setIsOpen((prev) => !prev);
@@ -98,6 +112,9 @@ const Header = () => {
                 <MenuIcon />
               </IconButton>
             )}
+            <button type="button" onClick={handelClick}>
+              <Image src={theme === 'light'?DarkLogo:LightLogo} alt="logo" className={styles.theme_logo}/>
+            </button>
           </Toolbar>
         </Container>
       </AppBar>
