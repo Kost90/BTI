@@ -3,7 +3,7 @@
 }
 
 .container_box {
-  @apply flex flex-col md:flex-row items-center justify-center md:justify-between gap-5 md:gap-0;
+  @apply flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-5 md:gap-0;
 }
 
 .socail_media_box {
