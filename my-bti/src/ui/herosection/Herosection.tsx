@@ -1,26 +1,30 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { listContent } from "./listdata";
 import Checkbox from "../../../public/assets/svg/Checkbox.svg";
+import { opacityVariants } from "@/constants/animation";
 import styles from "./Herosection.module.css";
+import { useEffect, useRef } from "react";
+import { useAppDispatch } from "@/lib/hooks";
+import { addTheme } from "@/lib/features/theme/ThemeSlicer";
 
 const Herosection = () => {
-  const Variants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      ease: "easeOut",
-    },
-  };
+  const ref = useRef(null)
+  const isInView = useInView(ref,{amount:0.5})
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if(isInView){
+      dispatch(addTheme('light'))
+    }
+  },[isInView])
 
   return (
-    <div className={styles.text_container}>
+    <div ref={ref} className={styles.text_container}>
       <h4>
         <span style={{ textTransform: "uppercase", color: "#22C55E" }}>
-          Моє БТІ
+        ГЕСТІЯ-БТІ
         </span>{" "}
         - ваш надійний партнер у сфері оформлення нерухомості.
       </h4>
@@ -34,7 +38,7 @@ const Herosection = () => {
               delay: i * 0.5,
             }}
             viewport={{ amount: 0.2, once: true }}
-            variants={Variants}
+            variants={opacityVariants}
             key={i}
           >
             <Image src={Checkbox} alt="checkbox" />

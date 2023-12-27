@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./CalculatorTP.module.css";
 import Link from "next/link";
+import Loader from "../loader/Loader";
 
 interface IInputData {
   squar: number;
@@ -16,9 +17,10 @@ interface IInputData {
 
 interface ICalculatorTPProps {
   onChange: (sum: number) => void;
+  onClick:() => void;
 }
 
-function CalculatorTP({ onChange }: ICalculatorTPProps) {
+function CalculatorTP({ onChange, onClick }: ICalculatorTPProps) {
   const {
     register,
     handleSubmit,
@@ -29,6 +31,7 @@ function CalculatorTP({ onChange }: ICalculatorTPProps) {
   const onSubmit: SubmitHandler<IInputData> = (data) => {
     const sum = Calculation(data);
     onChange(sum);
+    onClick();
     reset();
   };
 
@@ -59,8 +62,6 @@ function CalculatorTP({ onChange }: ICalculatorTPProps) {
 
 function CalcResult() {
   const [count, setCount] = useState(0);
-  const [service, setService] = useState({});
-  const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -73,7 +74,6 @@ function CalcResult() {
 
   const handelClick = () => {
     setLoading(!loading);
-    setShow(!show);
   };
 
   const handelChange = (sum: number) => {
@@ -81,11 +81,15 @@ function CalcResult() {
   };
   return (
     <div className="flex flex-col gap-2 items-center">
-      <CalculatorTP onChange={handelChange} />
-      <h1 className={styles.h1}>
+      <CalculatorTP onChange={handelChange} onClick={handelClick}/>
+      {loading === true?<Loader/>:<motion.h1 
+       initial={{opacity:0}}
+       animate={{opacity:1}}
+       transition={{ duration: 0.3 }}
+       className={styles.h1}>
         Вартість технічного паспорту становитеме:{" "}
         <span className={styles.span}>{count} грн.</span>
-      </h1>
+      </motion.h1>}
       {count !== 0 ? (
         <>
           <Button type={"button"}>

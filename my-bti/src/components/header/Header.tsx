@@ -15,8 +15,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Link from "next/link";
 import MenuMobile from "@/components/menumobile/MenuMobile";
-import { useAppDispatch, useAppSelector } from "@/lib/hooks";
-import { addTheme } from "@/lib/features/theme/ThemeSlicer";
+// import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+// import { addTheme } from "@/lib/features/theme/ThemeSlicer";
 import styles from "./header.module.css";
 
 const log_container = {
@@ -29,22 +29,14 @@ const log_container = {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const theme = useAppSelector((state) => state.theme.theme);
-  const dispatch = useAppDispatch();
 
   const handelChange = useCallback(() => {
-    if (theme === "light") {
-      dispatch(addTheme("dark"));
       setIsOpen((prev) => !prev);
-    } else {
-      dispatch(addTheme("light"));
-      setIsOpen((prev) => !prev);
-    }
   }, [isOpen]);
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: "white", zIndex: 20 }}>
+      <AppBar position="static" sx={{ backgroundColor: "inherit", zIndex: 20 }}>
         <Container>
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <Box sx={log_container}>
@@ -54,7 +46,7 @@ const Header = () => {
                 component="div"
                 sx={{ color: "#22C55E", fontWeight: "bold" }}
               >
-                МОЄ-БТІ
+                ГЕСТІЯ-БТІ
               </Typography>
             </Box>
             <Box sx={{ display: { xs: "none", md: "flex", color: "#556987" } }}>

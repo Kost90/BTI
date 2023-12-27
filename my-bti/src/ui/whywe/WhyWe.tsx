@@ -2,29 +2,31 @@
 import { Box } from "@mui/material";
 import { whyWecontent } from "./whyweData";
 import { contrCards, elips } from "./stylesconstans";
-import { text } from "./whyweData";
 import styles from "./Whywe.module.css";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { popUpOpacityVariant } from "@/constants/animation";
+import { useEffect, useRef } from "react";
+import { useAppDispatch } from "@/lib/hooks";
+import { addTheme } from "@/lib/features/theme/ThemeSlicer";
 
 const WhyWe = () => {
-  const Variants = {
-    hidden: {
-      opacity: 0,
-      y: 150,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      ease: "easeOut",
-    },
-  };
+  const ref = useRef(null)
+  const isInView = useInView(ref,{amount:0.7})
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if(isInView){
+      dispatch(addTheme('dark'))
+    }
+  },[isInView])
+  
   return (
-    <div className={styles.contr_content}>
+    <div ref={ref} className={styles.contr_content}>
       <motion.h4
         initial={"hidden"}
         whileInView={"visible"}
         viewport={{ amount: 0.3, once: true }}
-        variants={Variants}
+        variants={popUpOpacityVariant}
         className={styles.h4_hero}
       >
         ЧОМУ МИ?
@@ -39,7 +41,7 @@ const WhyWe = () => {
               delay: i * 0.2,
             }}
             viewport={{ amount: 0.1, once: true }}
-            variants={Variants}
+            variants={popUpOpacityVariant}
             key={i}
             className={styles.card}
           >
@@ -49,7 +51,6 @@ const WhyWe = () => {
           </motion.div>
         ))}
       </Box>
-      <h4 className={styles.h4_bottom}>{text}</h4>
     </div>
   );
 };

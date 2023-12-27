@@ -2,29 +2,33 @@
   position: relative;
   padding: 20vh 0 20vh 0;
   width: 100%;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(247, 248, 249, 0) 0%, #f7f8f9 100%);
   z-index: 1;
+}
+
+.box_container_hero_sec {
+  @apply container block md:flex gap-20 md:max-w-5xl lg:max-w-6xl;
+}
+
+.box_container {
+  @apply container md:max-w-5xl lg:max-w-7xl;
 }
 
 .card_list_section {
   position: relative;
   z-index: 1;
   padding-bottom: 10vh;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #fff 100%);
 }
 
 .aboutus_section {
   position: relative;
   padding-top: 10vh;
   padding-bottom: 20vh;
-  background: var(--gray-900, #2a3342);
   width: 100%;
 }
 
 .why_we_section {
   position: relative;
   padding-bottom: 10vh;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #fff 100%);
   width: 100%;
 }
 

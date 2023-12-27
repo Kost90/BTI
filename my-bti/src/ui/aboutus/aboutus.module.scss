@@ -5,23 +5,31 @@
     height: 400px;
 }
 
-.container_content{
+.container_content {
     @apply flex justify-between items-center;
 }
 
-.blue_frame{
+.text_container {
+    @apply flex flex-col items-center justify-center gap-5 mb-7 md:mb-14 max-w-lg text-justify;
+}
+
+.list_text {
+    @apply text-slate-500 text-sm md:text-xl font-medium;
+}
+
+.blue_frame {
     bottom: -10%;
     right: -10%;
     @apply hidden md:block absolute w-14 md:w-24 h-14 md:h-24;
 }
 
-.green_frame{
+.green_frame {
     top: -10%;
     left: -10%;
     @apply hidden md:block absolute w-14 md:w-24 h-14 md:h-24;
 }
 
-.h4{
+.h4 {
     @apply text-white uppercase font-bold;
 }
 

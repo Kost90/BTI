@@ -9,6 +9,14 @@
   @apply flex justify-between items-center;
 }
 
+.text_container {
+  @apply flex flex-col items-center justify-center gap-5 mb-7 md:mb-14 max-w-lg text-justify;
+}
+
+.list_text {
+  @apply text-slate-500 text-sm md:text-xl font-medium;
+}
+
 .blue_frame {
   bottom: -10%;
   right: -10%;

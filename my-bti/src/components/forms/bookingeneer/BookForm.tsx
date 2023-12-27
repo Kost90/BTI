@@ -10,6 +10,8 @@ import { TypeDevelopEnum, IFormInput } from "./models";
 import emailjs from "@emailjs/browser";
 import styles from "./BookForm.module.css";
 import { useRef } from "react";
+import { motion } from "framer-motion";
+import { popUpVariant } from "@/constants/animation";
 
 function BookForm() {
   const form = useRef<HTMLFormElement>(null);
@@ -52,10 +54,18 @@ function BookForm() {
     <>
       {book.time !== undefined ? (
         <>
-          <h2 className="uppercase font-semibold">
+          <motion.h2 
+          initial={"initial"}
+          whileInView={"visible"}
+          transition={{ duration: 0.3 }}
+          className="uppercase font-semibold">
             Введіть Ваші данні та адресу:
-          </h2>
-          <form
+          </motion.h2>
+          <motion.form
+          initial={"initial"}
+          whileInView={"visible"}
+          transition={{ duration: 0.3 }}
+          variants={popUpVariant}
             onSubmit={handleSubmit(onSubmit)}
             className={styles.bookform}
             ref={form}
@@ -132,7 +142,7 @@ function BookForm() {
               className="hidden"
             />
             <Button type={"submit"}>Надіслати</Button>
-          </form>
+          </motion.form>
         </>
       ) : null}
     </>

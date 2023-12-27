@@ -6,9 +6,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import ThemeContainer from "@/containers/themecontainer/ThemeContainer";
 
 export const metadata: Metadata = {
-  title: "МОЄ БТІ",
+  title: "ГЕСТІЯ-БТІ",
   description: "Оформлення нерухомості в Одесі",
 };
 
@@ -19,18 +20,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <StoreProvider>
           <CssBaseline />
-          <div className="layout">
+          <ThemeContainer>
             <Header />
             <main className="main">
               {children}
               <Footer />
             </main>
-          </div>
+          </ThemeContainer>
         </StoreProvider>
       </body>
     </html>

@@ -1,10 +1,61 @@
 .dark {
-  width: 100%;
-  background: rgba(30, 28, 28, 0.788);
-  z-index: 2;
+  @apply flex flex-col h-screen w-full z-10 bg-slate-800;
+}
+.dark h2 {
+  @apply text-white;
+}
+.dark h4 {
+  @apply text-xl md:text-3xl text-white;
+}
+.dark h5 {
+  @apply text-lg md:text-2xl;
+}
+.dark h6 {
+  @apply text-base md:text-xl text-slate-500;
+}
+.dark .card_container {
+  @apply flex items-center justify-center flex-col bg-slate-100 rounded-lg cursor-pointer p-8 text-slate-800 uppercase md:h-80;
+}
+.dark .card_container .card_content {
+  @apply flex flex-col items-center justify-center gap-4 transform transition-transform duration-500 hover:scale-125;
+}
+.dark .card_container .card_content h2 {
+  @apply text-slate-900;
+}
+.dark .text_content_book h1 {
+  @apply text-white;
+}
+.dark .text_content_book ul {
+  @apply text-slate-100;
 }
 
 .light {
-  width: 100%;
-  background-color: unset;
+  @apply flex flex-col h-screen w-full z-10 bg-white;
+}
+.light h2 {
+  @apply text-black;
+}
+.light h4 {
+  @apply text-xl md:text-3xl text-slate-950;
+}
+.light h5 {
+  @apply text-lg md:text-2xl;
+}
+.light h6 {
+  @apply text-base md:text-xl text-slate-500;
+}
+.light .card_container {
+  @apply flex items-center justify-center flex-col bg-slate-700 rounded-lg cursor-pointer p-8 text-white uppercase md:h-80;
+}
+.light .card_container .card_content {
+  @apply flex flex-col items-center justify-center gap-4 transform transition-transform duration-500 hover:scale-125;
+}
+.light .card_container .card_content h2 {
+  @apply text-white;
+}
+.light .text_content_book h1 {
+  @apply text-black;
+}
+.light .text_content_book ul {
+  @apply text-slate-700;
 }/*# sourceMappingURL=ThemeContainer.module.css.map */

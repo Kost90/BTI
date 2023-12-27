@@ -11,7 +11,7 @@
   @apply flex flex-col items-center justify-center gap-5 mb-8 md:mb-14;
 }
 .text_container h4 {
-  @apply text-slate-950 font-bold leading-8 text-center;
+  @apply font-bold leading-8 text-center;
 }
 .text_container .list_text {
   @apply text-slate-500 text-sm md:text-xl font-medium;

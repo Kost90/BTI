@@ -25,7 +25,6 @@ const Propertyservicecalc = memo(
     const handelChange: SubmitHandler<IInput> = (data: IInput) => {
       onClick();
       const result = TypeChecker(data);
-      console.log(result);
       onChange(result);
       reset();
     };

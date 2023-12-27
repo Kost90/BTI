@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 };
 
 const TechnicalpasportService = async () => {
-const data = await DataBaseApi.getDates();
+  const data = await DataBaseApi.getDates();
 
   return (
     <div className={styles.page_container}>
       <TextContent />
-      <Calendar data={data}/>
-      <BookForm/>
+      <Calendar data={data} />
+      <BookForm />
     </div>
   );
 };

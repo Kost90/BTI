@@ -31,7 +31,7 @@ function SideSection() {
             <Image src={EmailIcon} alt="emailicon" />
           </div>
           <p>Email:</p>
-          <p>mybti@gmail.com</p>
+          <p>MyBtiOdesa@gmail.com</p>
         </div>
 
         <div className={styles.side_sec_card}>
@@ -39,7 +39,7 @@ function SideSection() {
             <Image src={PhoneIcon} alt="phoneicon" />
           </div>
           <p>Телефон:</p>
-          <p>+380637306501</p>
+          <p>+380958153656</p>
         </div>
       </div>
       <div className={styles.flex_container}>

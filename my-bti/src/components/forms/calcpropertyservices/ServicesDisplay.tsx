@@ -1,10 +1,18 @@
+'use client'
 import Button from "@/components/button/Button";
 import Link from "next/link";
 import styles from './Propertyservice.module.css'
+import { motion } from "framer-motion";
+import { popUpVariant } from "@/constants/animation";
 
 function ServicesDisplay({ services, onClick }: any) {
   return (
-    <div className={styles.display_container}>
+    <motion.div 
+    initial={"initial"}
+    whileInView={"visible"}
+    transition={{ duration: 0.3 }}
+    variants={popUpVariant}
+    className={styles.display_container}>
       <h1>Послуга:</h1>
       <h2>{services.title}</h2>
       <h1>Необхідні документи:</h1>
@@ -27,7 +35,7 @@ function ServicesDisplay({ services, onClick }: any) {
       <Button type={"button"}>
         <button type="button" onClick={onClick}>Обрати іншу послугу</button>
         </Button>
-    </div>
+    </motion.div>
   );
 }
 
