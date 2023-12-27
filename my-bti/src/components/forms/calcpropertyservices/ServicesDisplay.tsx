@@ -21,7 +21,7 @@ function ServicesDisplay({ services, onClick }: any) {
           <li key={i}>{item}</li>
         ))}
       </ul>
-      <h1>Етапи виконання псоулги:</h1>
+      <h1>Етапи виконання послуги:</h1>
       <ul>
         {services.stages.map((item: string, i:number) => (
           <li key={i}>{item}</li>
