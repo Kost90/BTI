@@ -11,8 +11,8 @@ export interface dataParams {
 }
 
 export const metadata: Metadata = {
-  title: "МОЄ БТІ",
-  description: "Оформлення технічного паспорту на нерухомість",
+  title: "Технічний пасрорт | ГЕСТІЯ-БТІ",
+  description: "Виготовлення технічного паспорту на нерухомість",
 };
 
 const TechnicalpasportService = async () => {

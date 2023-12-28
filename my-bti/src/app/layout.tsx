@@ -10,7 +10,8 @@ import ThemeContainer from "@/containers/themecontainer/ThemeContainer";
 
 export const metadata: Metadata = {
   title: "ГЕСТІЯ-БТІ",
-  description: "Оформлення нерухомості в Одесі",
+  description: "Оформлення нерухомості в Одесі, послуги БТІ",
+  metadataBase: new URL('https://hestiyabti.com'),
 };
 
 export const inter = Inter({ subsets: ["latin"] });
