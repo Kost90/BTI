@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: 'https://acme.com/aboutus',
+      url: 'https://hestiyabti.com/aboutus',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.5,
