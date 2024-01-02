@@ -11,8 +11,9 @@ export interface dataParams {
 }
 
 export const metadata: Metadata = {
-  title: "Технічний пасрорт | ГЕСТІЯ-БТІ",
+  title: "Технічний паспорт | ГЕСТІЯ-БТІ",
   description: "Виготовлення технічного паспорту на нерухомість",
+  metadataBase: new URL('https://hestiyabti.com/services/bookingeneer'),
 };
 
 const TechnicalpasportService = async () => {

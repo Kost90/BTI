@@ -9,7 +9,7 @@ import Footer from "@/components/footer/Footer";
 import ThemeContainer from "@/containers/themecontainer/ThemeContainer";
 
 export const metadata: Metadata = {
-  title: "ГЕСТІЯ-БТІ",
+  title: "ГЕСТІЯ-БТІ | Оформлення нерухомості, послуги БТІ",
   description: "Оформлення нерухомості в Одесі, послуги БТІ",
   metadataBase: new URL('https://hestiyabti.com'),
 };

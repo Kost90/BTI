@@ -5,6 +5,7 @@ import React from "react";
 export const metadata: Metadata = {
   title: "Оформлення нерухомості | ГЕСТІЯ-БТІ",
   description: "Оформлення нерухомості Одеса",
+  metadataBase: new URL('https://hestiyabti.com/services'),
 };
 
 const Services = async () => {
