@@ -10,8 +10,8 @@
     max-width: 500px;
     margin: 0 auto;
     @apply flex flex-col items-center justify-center gap-5 mb-8 md:mb-14;
-    h4{
-        @apply font-bold leading-8 text-center;
+    h1{
+        @apply font-bold leading-8 text-center text-2xl;
     }
     .list_text{
         @apply text-slate-500 text-sm md:text-xl font-medium;
@@ -20,7 +20,7 @@
 
 @media (min-width:768px){
     .text_container{
-        h4{
+        h1{
             text-align: unset;
         }
     }

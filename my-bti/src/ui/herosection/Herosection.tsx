@@ -11,12 +11,12 @@ const Herosection = () => {
 
   return (
     <div className={styles.text_container}>
-      <h4>
+      <h1>
         <span style={{ textTransform: "uppercase", color: "#22C55E" }}>
         ГЕСТІЯ-БТІ
         </span>{" "}
         - ваш надійний партнер у сфері оформлення нерухомості.
-      </h4>
+      </h1>
       <ul className={styles.ul_container}>
         {listContent.map((el, i) => (
           <motion.li
