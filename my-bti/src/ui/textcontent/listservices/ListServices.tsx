@@ -18,8 +18,8 @@ function ListServices() {
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.8, opacity: 0 }}
       >
-        {cardContent.map((item) => (
-          <div className={styles.card_container}>
+        {cardContent.map((item,i) => (
+          <div className={styles.card_container} key={i}>
             <Image src={item.src} alt="icon" />
             <motion.h2>{item.title}</motion.h2>
             <motion.ul>
