@@ -17,7 +17,8 @@ function LoopLine() {
   return (
     <div className={styles.loop_container}>
       <motion.p initial="hidden" animate="visible" variants={variants}>
-        отримуй знижку <span>-10% за онлайн виклик інженера</span>
+        отримуй знижку <span>-10% на виготовлення технічного паспорту</span>
+        за онлайн виклик інженера
       </motion.p>
     </div>
   );

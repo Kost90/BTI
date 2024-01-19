@@ -1,5 +1,8 @@
 .dark {
   @apply flex flex-col h-screen w-full z-10 bg-slate-800;
+  h1 {
+    @apply text-white text-xl md:text-2xl;
+  }
   h2 {
     @apply text-white;
   }
@@ -18,8 +21,8 @@
 
     .card_content {
       @apply flex flex-col items-center justify-center gap-4 transform transition-transform duration-500 hover:scale-125;
-      h2 {
-        @apply text-slate-800 font-semibold;
+      h1 {
+        @apply text-slate-800 font-semibold text-center text-lg md:text-xl;
       }
     }
   }
@@ -50,6 +53,9 @@
 
 .light {
   @apply flex flex-col h-screen w-full z-10 bg-white;
+  h1 {
+    @apply text-black text-xl md:text-2xl;
+  }
   h2 {
     @apply text-black;
   }
@@ -68,8 +74,8 @@
 
     .card_content {
       @apply flex flex-col items-center justify-center gap-4 transform transition-transform duration-500 hover:scale-125;
-      h2 {
-        @apply text-white font-semibold;
+      h1 {
+        @apply text-white font-semibold text-center text-base md:text-lg;
       }
     }
   }

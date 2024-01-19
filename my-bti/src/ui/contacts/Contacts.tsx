@@ -5,7 +5,8 @@ import styles from "./contacts.module.css";
 function Contacts() {
   return (
     <div>
-      <h4 className={styles.h4_hero}>ЗАЛИШИТИ ПОВІДОМЛЕННЯ</h4>
+      <h1 className={styles.h1_hero}>НЕОБХІДНО ОФОРМИТИ ПРАВО ВЛАСНОСТІ</h1>
+      <h1 className={styles.h1_hero}>ЗАЛИШ СВОЄ ПОВІДОМЛЕННЯ:</h1>
       <div className={styles.container_box}>
         <SideSection />
         <ContactForm />

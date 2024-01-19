@@ -5,16 +5,16 @@ import styles from "./Carousel.module.css";
 
 const content = [
   {
-    name: "Замовити послугу з офрмлення нерухомості",
+    name: "Офрмлення нерухомості",
     description:
       "Скористайся послугою розрахунку вартості оформлення обєкту нерухомості та бронювання дати та часу зустрічі з юристом",
-    path: "/services/calcpropertyservices",
+    path: "/services/property-services",
   },
   {
-    name: "Замовити технічний паспорт на нерухомість",
+    name: "Замовити технічний паспорт",
     description:
       "Скористайся послугою розрахунку вартості технічного паспорту на обєкт нерухомості та бронювання дати та часу виїзда інженера",
-    path: "/services/bookingeneer",
+    path: "/services/book-ingeneer",
   },
 ];
 

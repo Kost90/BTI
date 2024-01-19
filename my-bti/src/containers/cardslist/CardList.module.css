@@ -3,7 +3,6 @@
   z-index: 1;
   padding: 10vh 0;
 }
-
-.h4 {
-  @apply text-center my-5 md:my-10 font-bold text-gray-900;
+.card_list_section .h4 {
+  @apply text-center my-5 md:my-10 font-bold text-xl md:text-2xl;
 }/*# sourceMappingURL=CardList.module.css.map */

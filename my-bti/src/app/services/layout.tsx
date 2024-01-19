@@ -4,15 +4,15 @@ import { usePathname } from "next/navigation";
 
 const links = [
   {
-    href: "/services/bookingeneer",
+    href: "/services/book-ingeneer",
     name: "Виклик інженера онлайн",
   },
   {
-    href: "/services/calcpropertyservices",
+    href: "/services/property-services",
     name: "Розрахунок оформлення нерухомості",
   },
   {
-    href: "/services/calctechpasport",
+    href: "/services/calculation-cost-technical-pasport",
     name: "Розрахунок вартості технічного паспорту",
   },
 ];

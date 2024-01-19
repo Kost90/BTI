@@ -11,7 +11,7 @@ import {
   addTime,
 } from "@/lib/features/bookeddates/BookedDatesSlicer";
 import styles from "./Calendar.module.css";
-import { dataParams } from "@/app/services/bookingeneer/page";
+import { dataParams } from "@/app/services/book-ingeneer/page";
 
 interface CalendarProps {
   data: dataParams[];

@@ -2,23 +2,23 @@
 import React, { useState, forwardRef, Ref } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cardContent } from "@/constants/CardsData";
-import stylestheme from '../../containers/themecontainer/ThemeContainer.module.css'
+import stylestheme from "../../containers/themecontainer/ThemeContainer.module.css";
 import styles from "./Card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card =  forwardRef(({props}:any,ref:Ref<HTMLDivElement>) =>{
+const Card = forwardRef(({ props }: any, ref: Ref<HTMLDivElement>) => {
   const [selectedId, setSelectedId] = useState("");
 
   return (
     <>
       <motion.div
-      initial={{ opacity: 0, y: 150 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      viewport={{ once: true, amount: 0.4 }}
-      ref={ref}
-      className={styles.grid_container}
+        initial={{ opacity: 0, y: 150 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        viewport={{ once: true, amount: 0.4 }}
+        ref={ref}
+        className={styles.grid_container}
       >
         {cardContent.map((item) => (
           <motion.div
@@ -34,7 +34,7 @@ const Card =  forwardRef(({props}:any,ref:Ref<HTMLDivElement>) =>{
           >
             <div className={stylestheme.card_content}>
               <Image src={item.src} alt="icon" />
-              <motion.h2>{item.title}</motion.h2>
+              <motion.h1>{item.title}</motion.h1>
             </div>
           </motion.div>
         ))}
@@ -89,7 +89,7 @@ const Card =  forwardRef(({props}:any,ref:Ref<HTMLDivElement>) =>{
       </AnimatePresence>
     </>
   );
-})
+});
 
 Card.displayName = "Card";
 

@@ -1,5 +1,5 @@
-.h4_hero {
-  @apply text-center my-5 md:my-10 font-bold text-gray-900;
+.h1_hero {
+  @apply text-center my-5 md:my-10 font-bold;
 }
 
 .contr_content {

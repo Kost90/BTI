@@ -1,6 +1,9 @@
 .dark {
   @apply flex flex-col h-screen w-full z-10 bg-slate-800;
 }
+.dark h1 {
+  @apply text-white text-xl md:text-2xl;
+}
 .dark h2 {
   @apply text-white;
 }
@@ -19,8 +22,8 @@
 .dark .card_container .card_content {
   @apply flex flex-col items-center justify-center gap-4 transform transition-transform duration-500 hover:scale-125;
 }
-.dark .card_container .card_content h2 {
-  @apply text-slate-800 font-semibold;
+.dark .card_container .card_content h1 {
+  @apply text-slate-800 font-semibold text-center text-lg md:text-xl;
 }
 .dark .text_content_book h1 {
   @apply text-white;
@@ -45,6 +48,9 @@
 .light {
   @apply flex flex-col h-screen w-full z-10 bg-white;
 }
+.light h1 {
+  @apply text-black text-xl md:text-2xl;
+}
 .light h2 {
   @apply text-black;
 }
@@ -63,8 +69,8 @@
 .light .card_container .card_content {
   @apply flex flex-col items-center justify-center gap-4 transform transition-transform duration-500 hover:scale-125;
 }
-.light .card_container .card_content h2 {
-  @apply text-white font-semibold;
+.light .card_container .card_content h1 {
+  @apply text-white font-semibold text-center text-base md:text-lg;
 }
 .light .text_content_book h1 {
   @apply text-black;

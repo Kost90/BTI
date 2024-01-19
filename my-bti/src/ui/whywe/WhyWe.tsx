@@ -10,15 +10,15 @@ const WhyWe = () => {
 
   return (
     <div className={styles.contr_content}>
-      <motion.h4
+      <motion.h1
         initial={"hidden"}
         whileInView={"visible"}
         viewport={{ amount: 0.3, once: true }}
         variants={popUpOpacityVariant}
-        className={styles.h4_hero}
+        className={styles.h1_hero}
       >
         ЧОМУ МИ?
-      </motion.h4>
+      </motion.h1>
       <Box sx={contrCards}>
         {whyWecontent.map((item, i) => (
           <motion.div

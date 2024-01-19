@@ -1,0 +1,24 @@
+.card_wrapper {
+    @apply flex flex-col md:flex-row justify-center md:justify-around gap-8 md:gap-0;
+}
+
+.card_container {
+    @apply flex flex-col items-center gap-3 p-3 md:p-6 bg-slate-50 rounded-md w-80 md:w-card;
+    h2 {
+        @apply text-center text-black font-semibold;
+    }
+    li {
+        @apply text-sm md:text-lg text-slate-700;
+    }
+    button {
+        @apply p-2 md:p-3 border flex justify-center items-center rounded-md bg-green-600 text-white hover:bg-green-800 cursor-pointer;
+    }
+}
+
+.h1 {
+    @apply font-semibold text-center py-4 md:py-8 md:mb-6;
+}
+
+.ul {
+    @apply list-disc m-4 md:m-8;
+}
