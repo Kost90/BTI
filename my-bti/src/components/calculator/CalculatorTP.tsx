@@ -95,7 +95,7 @@ function CalcResult() {
       {count !== 0 ? (
         <>
           <Button type={"button"}>
-            <Link href="/services/bookingeneer">ЗАБРОНЮВАТИ ОБМІР</Link>
+            <Link href="/services/book-ingeneer">ЗАБРОНЮВАТИ ОБМІР</Link>
           </Button>
         </>
       ) : null}
