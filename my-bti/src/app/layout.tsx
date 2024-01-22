@@ -1,6 +1,8 @@
 import StoreProvider from "./StoreProvider";
 import { Inter } from "next/font/google";
 import CssBaseline from "@mui/material/CssBaseline";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 import type { Metadata } from "next";
 import "./globals.css";
@@ -25,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body className={`${inter.className} antialiased`}>
+      <GoogleAnalytics gaId="G-8RZCSB5RQR" />
         <StoreProvider>
           <CssBaseline />
           <ThemeContainer>
