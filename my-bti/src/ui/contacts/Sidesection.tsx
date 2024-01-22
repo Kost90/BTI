@@ -32,7 +32,7 @@ function SideSection() {
             <Image src={EmailIcon} alt="emailicon" />
           </div>
           <p>Email:</p>
-          <p>mybtiodesa@gmail.com</p>
+          <a href="mailto:mybtiodesa@gmail.com">mybtiodesa@gmail.com</a>
         </div>
 
         <div className={styles.side_sec_card}>
@@ -40,7 +40,7 @@ function SideSection() {
             <Image src={PhoneIcon} alt="phoneicon" />
           </div>
           <p>Телефон:</p>
-          <p>+380958153656</p>
+          <a href="tel:+380958153656">+380958153656</a>
         </div>
       </div>
       <div className={styles.flex_container}>
