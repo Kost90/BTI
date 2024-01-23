@@ -44,6 +44,9 @@
 .dark .side_contr p {
   @apply text-slate-800 font-semibold;
 }
+.dark .side_contr a {
+  @apply text-slate-800 font-semibold;
+}
 
 .light {
   @apply flex flex-col h-screen w-full z-10 bg-white;
@@ -86,5 +89,8 @@
   @apply container bg-slate-700 w-full rounded-md p-5 md:p-10 md:h-96 relative flex flex-col items-center;
 }
 .light .side_contr p {
+  @apply text-white;
+}
+.light .side_contr a {
   @apply text-white;
 }/*# sourceMappingURL=ThemeContainer.module.css.map */

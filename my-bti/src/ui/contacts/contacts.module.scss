@@ -50,6 +50,9 @@
         overflow-wrap: break-word;
         @apply font-normal text-xs md:text-sm text-center text-white;
     }
+    a{
+        @apply text-white;
+    }
 }
 
 .elips {

@@ -50,6 +50,9 @@
   overflow-wrap: break-word;
   @apply font-normal text-xs md:text-sm text-center text-white;
 }
+.side_sec_card a {
+  @apply text-white;
+}
 
 .elips {
   @apply flex items-center justify-center w-12 h-12 bg-green-500 rounded-full text-white;
